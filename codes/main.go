@@ -11,25 +11,7 @@ import (
 	"github.com/mahfuz/golang-all-in/packages/redis"
 )
 
-type Person struct {
-	Name  string
-	Age   int
-	Email string
-}
-
-func NewPerson() Person {
-	return Person{
-		Name:  "John Doe",
-		Age:   30,
-		Email: "john.doe@example.com",
-	}
-}
-
 func main() {
-	person := NewPerson()
-	fmt.Println("Name:", person.Name)
-	fmt.Println("Age:", person.Age)
-	fmt.Println("Email:", person.Email)
 
 	db, err := db.DbConnection()
 	if err != nil {
