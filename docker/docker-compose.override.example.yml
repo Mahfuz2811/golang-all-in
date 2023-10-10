@@ -1,0 +1,12 @@
+version: '3.7'
+
+networks:
+  default:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+  golang-app:
+    env_file:
+      - .envs/app.env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

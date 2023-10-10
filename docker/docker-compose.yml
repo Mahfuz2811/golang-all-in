@@ -1,0 +1,15 @@
+version: '3.7'
+
+networks:
+  default:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+  golang-app:
+    image: golang-all-in
+    build:
+      context: ../
+      dockerfile: docker/app/Dockerfile
+    container_name: golang-all-in-container
+    networks:
+      default:
